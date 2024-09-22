@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Balance Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            position: relative;
+        }
+        .container {
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 15px;
+            font-size: 18px;
+            width: calc(100% - 32px);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .overlay-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 25%;
+            background: #fff;
+            color: black;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 12px;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border: 5px solid orange;
+        }
+        #balanceDisplay {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .logo {
+            width: 80px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Bank Name</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bank_balance.html">Bank Balance</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <img src="D:\Samar\YT\ed.png" alt="Bank Logo" class="logo">
+        <div class="container">
+            <h2>Bank Balance Checker</h2>
+            <input type="text" id="bankNameInput" placeholder="Enter bank name">
+            <br>
+            <input type="text" id="usernameInput" placeholder="Enter username">
+            <br>
+            <input type="password" id="balanceInput" placeholder="Enter password">
+            <br>
+            <input type="password" id="passkeyInput" placeholder="Enter passkey">
+            <br>
+            <button onclick="showBalance()">Show Balance</button>
+            <div class="overlay-box" id="overlayBox">
+                <div id="balanceDisplay"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showBalance() {
+            var bankName = document.getElementById('bankNameInput').value;
+            var username = document.getElementById('usernameInput').value;
+            var balance = document.getElementById('balanceInput').value;
+            var passkey = document.getElementById('passkeyInput').value;
+
+            var correctPasskey = 'Dominaterr69'; 
+
+            var overlayBox = document.getElementById('overlayBox');
+            var balanceDisplay = document.getElementById('balanceDisplay');
+
+            if (passkey === correctPasskey) {
+                balanceDisplay.innerHTML = "Bank: " + bankName + "<br>" + username + ", Your Bank Balance is: ₹" + balance;
+                overlayBox.style.display = 'flex';
+            } else {
+                balanceDisplay.innerHTML = "Incorrect passkey. Please try again.";
+                overlayBox.style.display = 'flex';
+            }
+        }
+    </script>
+
+</body>
+</html>

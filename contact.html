@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dominaterr Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            background-color: #fff;
+            position: relative;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            width: 80px; /* Adjust size as needed */
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #343a40;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .copy-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard: ' + text);
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Dominaterr Bank</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bank_balance.html">Bank Balance</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <img src="D:\Samar\YT\ed.png" alt="Bank Logo" class="logo">
+            <h1>Contact Us</h1>
+        </header>
+
+        <p>Contact Number: <strong>9911588689</strong> 
+            <button class="copy-button" onclick="copyToClipboard('9911588689')">Copy</button>
+        </p>
+        
+        <p>Email: <strong>samarkushwaha700@gmail.com</strong> 
+            <button class="copy-button" onclick="copyToClipboard('samarkushwaha700@gmail.com')">Copy</button>
+        </p>
+
+        <p>YouTube: <a href="https://www.youtube.com/@DominaterrCoding-d8u" target="_blank">www.youtube.com/@DominaterrCoding-d8u</a></p>
+
+        <p><a href="https://github.com/Dominaterr69" target="_blank">GitHub - Dominaterr69</a></p>
+    </div>
+
+</body>
+</html>
